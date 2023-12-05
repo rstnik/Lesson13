@@ -1,0 +1,81 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+@import "./icons.scss";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Lora:wght@700&family=Quicksand:wght@400;500;700&family=Roboto+Slab:wght@400;700&display=swap");
+* {
+  text-decoration: none;
+  list-style-type: none;
+  color: $black;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-1 {
+  background: no-repeat;
+}
+
+.about {
+  @include flex(center,center,50px);
+  flex-direction: column;
+  padding: 130px 0;
+  &-title {
+    @include RobotoSlab(56px, 74px, 700);
+    text-transform: uppercase;
+  }
+  &-text {
+    @include Quicksand(20px, 42px, 500);
+    width: 50%;
+    text-align: center;
+  }
+  .cards {
+    @include flex(space-around,center,0);
+    margin-top: 50px;
+    width: 100%;
+    .card {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 35px;
+      width: 20%;
+      &-text {
+        @include Quicksand(40px, 32px, 400);
+        text-align: center;
+      }
+      &-svg {
+        position: relative;
+        &::before {
+            position: absolute;
+            z-index: -1;
+            top: -100px;
+          color: $green;
+          @include RobotoSlab(144px,normal,700);
+          text-transform: uppercase;
+        }
+      }
+      &-svg.svg1 {
+        &::before {
+          content: "4670";
+          left: -90px;
+        }
+      }
+      &-svg.svg2 {
+        &::before {
+          content: "65%";
+          left: -50px;
+        }
+      }
+      &-svg.svg3 {
+        &::before {
+          content: "148";
+          left: -45px;
+        }
+      }
+      &-svg.svg4 {
+        &::before {
+          content: "11";
+          left: 10px;
+        }
+      }
+    }
+  }
+}
