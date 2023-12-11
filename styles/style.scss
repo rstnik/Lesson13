@@ -11,12 +11,109 @@
 }
 
 .bg-1 {
-  background: no-repeat;
+  background: no-repeat url(../images/bg_1.jpg);
+  background-size: 100%;
+  // min-height: 964px;
+  main {
+    @include flex(center, center, 0px, none);
+    min-height: 964px;
+    .info {
+      @include flex(center, center, 32px, column);
+      background-color: $blackOpasity;
+      padding: 40px 30px;
+      &-title {
+        @include Lora(84px, 100px, 700);
+        text-align: center;
+        color: $white;
+      }
+      &-subtitle {
+        @include Lato(24px, 28px, 400);
+        color: $white;
+      }
+    }
+  }
+}
+
+.btn {
+  padding: 21px 110px;
+  @include Lato(16px, 19px, 900);
+  color: $white;
+  background-color: $green;
+  text-align: center;
+}
+
+.menu {
+  padding: 30px 0;
+  @include flex(space-around, center, 0, row);
+}
+
+.header {
+  background-color: $blackOpasity;
+  &__name {
+    color: $white;
+  }
+  &__nav {
+    li {
+      color: $white;
+    }
+  }
+  &__social {
+    span {
+      color: $white;
+    }
+  }
+}
+
+.footer {
+  background: no-repeat url(../images/bg_footer.png);
+  background-size: 100%;
+  min-height: 100px;
+  &__name {
+    color: $black;
+  }
+  &__nav {
+    li {
+      color: $black;
+    }
+  }
+  &__social {
+    span {
+      color: $black;
+    }
+  }
+}
+
+.name {
+  @include RobotoSlab(32px, 32px, 700);
+}
+
+.nav {
+  menu {
+    @include flex(center, center, 45px, row);
+  }
+  &__link {
+    @include Lato(22px, 26px, 500);
+  }
+}
+
+.langBar {
+  @include flex(center, center, 5px, row);
+  svg {
+    fill: $white;
+  }
+}
+
+.social {
+  menu {
+    @include flex(center, center, 20px, row);
+  }
+  &__link {
+    font-size: 24px;
+  }
 }
 
 .about {
-  @include flex(center,center,50px);
-  flex-direction: column;
+  @include flex(center, center, 50px, column);
   padding: 130px 0;
   &-title {
     @include RobotoSlab(56px, 74px, 700);
@@ -28,14 +125,11 @@
     text-align: center;
   }
   .cards {
-    @include flex(space-around,center,0);
+    @include flex(space-around, center, 0, row);
     margin-top: 50px;
     width: 100%;
     .card {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      gap: 35px;
+      @include flex(none, center, 35px, column);
       width: 20%;
       &-text {
         @include Quicksand(40px, 32px, 400);
@@ -44,11 +138,11 @@
       &-svg {
         position: relative;
         &::before {
-            position: absolute;
-            z-index: -1;
-            top: -100px;
+          position: absolute;
+          z-index: -1;
+          top: -100px;
           color: $green;
-          @include RobotoSlab(144px,normal,700);
+          @include RobotoSlab(144px, normal, 700);
           text-transform: uppercase;
         }
       }
@@ -75,6 +169,161 @@
           content: "11";
           left: 10px;
         }
+      }
+    }
+  }
+}
+
+.nearest__trip {
+  background: no-repeat url(../images/barcelona.jpg);
+  background-size: 100%;
+  min-height: 758px;
+  @include flex(center, center, 0, none);
+  .info {
+    @include flex(center, center, 30px, column);
+    &-title {
+      @include RobotoSlab(56px, 73px, 700);
+      color: $white;
+    }
+    &-title2 {
+      @include RobotoSlab(114px, 114px, 700);
+      color: $white;
+    }
+    &-subtitle {
+      @include Quicksand(24px, 18px, 500);
+      color: $white;
+    }
+    &-text {
+      position: relative;
+      @include Quicksand(24px, 32px, 400);
+      text-align: center;
+      color: $white;
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: $white;
+        width: 300px;
+        height: 3px;
+        top: 138px;
+        left: 387px;
+      }
+    }
+    &-discount {
+      @include Quicksand(28px, 32px, 500);
+      color: $white;
+      margin-top: 10px;
+    }
+    &-btn {
+      padding: 19px 60px;
+      @include Quicksand(20px, 18px, 700);
+    }
+  }
+}
+.popular__ways {
+  @include flex(center, center, 50px, column);
+  padding: 100px 0;
+  &-title {
+    @include RobotoSlab(56px, 73px, 700);
+    color: $grey;
+  }
+  .cards {
+    @include flex(center, center, 40px, row);
+    .card {
+      position: relative;
+      width: 514px;
+      height: 342px;
+      &-prague {
+        background: no-repeat url(../images/prague.jpg);
+        background-size: 100%;
+      }
+      &-portugal {
+        background: no-repeat url(../images/portugal.jpg);
+        background-size: 100%;
+      }
+      &-dubai {
+        background: no-repeat url(../images/dubai.jpg);
+        background-size: 100%;
+      }
+      &-text {
+        position: absolute;
+        margin-top: 10px;
+        padding: 5px 8px;
+        background-color: $blackOpasity2;
+        @include RobotoSlab(18px, 18px, 400);
+        color: $white;
+      }
+    }
+  }
+  .btn__logo {
+    @include flex(center, center, 8px, column);
+    .btn {
+      @include Quicksand(20px, 18px, 700);
+      padding: 19px 62px;
+    }
+    .text {
+      @include Quicksand(14px, 18px, 500);
+      color: $grey;
+      text-align: center;
+    }
+  }
+}
+
+.stories {
+  position: relative;
+  @include flex(center, center, 32px, column);
+  background: no-repeat url(../images/bg__stories.png);
+  background-size: 100%;
+  padding: 60px 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $greenOpasity;
+  }
+  &-title {
+    @include RobotoSlab(56px, 73px, 700);
+    color: $white;
+    z-index: 1;
+  }
+  .cards {
+    @include flex(center, center, 112px, row);
+    .card {
+      position: relative;
+      width: 441px;
+      height: 294px;
+      &-thailand {
+        background: no-repeat url(../images/thailand.jpg);
+        background-size: 100%;
+      }
+      &-our {
+        width: 514px;
+        height: 342px;
+        background: no-repeat url(../images/our.jpg);
+        background-size: 100%;
+      }
+      &-aurora {
+        background: no-repeat url(../images/aurora.jpg);
+        background-size: 100%;
+      }
+      &-text{
+        position: absolute;
+        margin-top: 12px;
+        padding: 5px 8px;
+        background-color: $blackOpasity2;
+        @include Lato(14px, 16px, 500);
+        color: $white;
+      }
+      .play__button{
+       position: absolute;
+       top: 127px;
+       left: 200px;
+       &-our{
+        top: 146px;
+        left: 236px;
+       }
       }
     }
   }

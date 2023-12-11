@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Lora:wght@700&family=Quicksand:wght@400;500;700&family=Roboto+Slab:wght@400;700&display=swap");
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot?154oza");
-  src: url("fonts/icomoon.eot?154oza#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?154oza") format("truetype"), url("fonts/icomoon.woff?154oza") format("woff"), url("fonts/icomoon.svg?154oza#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot") format("embedded-opentype"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.svg") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -22,19 +22,19 @@
 }
 
 .icon-facebook:before {
-  content: "\ea90";
+  content: "\e900";
 }
 
 .icon-twitter:before {
-  content: "\ea96";
+  content: "\e901";
 }
 
 .icon-vk:before {
-  content: "\ea98";
+  content: "\e902";
 }
 
 .icon-youtube:before {
-  content: "\ea9d";
+  content: "\e903";
 }
 
 * {
@@ -46,7 +46,136 @@
 }
 
 .bg-1 {
-  background: no-repeat;
+  background: no-repeat url(../images/bg_1.jpg);
+  background-size: 100%;
+}
+.bg-1 main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  flex-direction: none;
+  min-height: 964px;
+}
+.bg-1 main .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 40px 30px;
+}
+.bg-1 main .info-title {
+  font-family: "Lora", serif;
+  font-style: normal;
+  font-size: 84px;
+  font-weight: 700;
+  line-height: 100px;
+  text-align: center;
+  color: #fff;
+}
+.bg-1 main .info-subtitle {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #fff;
+}
+
+.btn {
+  padding: 21px 110px;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 19px;
+  color: #fff;
+  background-color: #1ed400;
+  text-align: center;
+}
+
+.menu {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
+  flex-direction: row;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.header__name {
+  color: #fff;
+}
+.header__nav li {
+  color: #fff;
+}
+.header__social span {
+  color: #fff;
+}
+
+.footer {
+  background: no-repeat url(../images/bg_footer.png);
+  background-size: 100%;
+  min-height: 100px;
+}
+.footer__name {
+  color: #000;
+}
+.footer__nav li {
+  color: #000;
+}
+.footer__social span {
+  color: #000;
+}
+
+.name {
+  font-family: "Roboto Slab", serif;
+  font-style: normal;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.nav menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  flex-direction: row;
+}
+.nav__link {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.langBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-direction: row;
+}
+.langBar svg {
+  fill: #fff;
+}
+
+.social menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: row;
+}
+.social__link {
+  font-size: 24px;
 }
 
 .about {
@@ -79,14 +208,16 @@
   justify-content: space-around;
   align-items: center;
   gap: 0;
+  flex-direction: row;
   margin-top: 50px;
   width: 100%;
 }
 .about .cards .card {
   display: flex;
+  justify-content: none;
   align-items: center;
-  flex-direction: column;
   gap: 35px;
+  flex-direction: column;
   width: 20%;
 }
 .about .cards .card-text {
@@ -127,4 +258,236 @@
 .about .cards .card-svg.svg4::before {
   content: "11";
   left: 10px;
+}
+
+.nearest__trip {
+  background: no-repeat url(../images/barcelona.jpg);
+  background-size: 100%;
+  min-height: 758px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-direction: none;
+}
+.nearest__trip .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
+}
+.nearest__trip .info-title {
+  font-family: "Roboto Slab", serif;
+  font-style: normal;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 73px;
+  color: #fff;
+}
+.nearest__trip .info-title2 {
+  font-family: "Roboto Slab", serif;
+  font-style: normal;
+  font-size: 114px;
+  font-weight: 700;
+  line-height: 114px;
+  color: #fff;
+}
+.nearest__trip .info-subtitle {
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #fff;
+}
+.nearest__trip .info-text {
+  position: relative;
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  color: #fff;
+}
+.nearest__trip .info-text::before {
+  position: absolute;
+  content: "";
+  background-color: #fff;
+  width: 300px;
+  height: 3px;
+  top: 138px;
+  left: 387px;
+}
+.nearest__trip .info-discount {
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 32px;
+  color: #fff;
+  margin-top: 10px;
+}
+.nearest__trip .info-btn {
+  padding: 19px 60px;
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.popular__ways {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-direction: column;
+  padding: 100px 0;
+}
+.popular__ways-title {
+  font-family: "Roboto Slab", serif;
+  font-style: normal;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 73px;
+  color: #333333;
+}
+.popular__ways .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-direction: row;
+}
+.popular__ways .cards .card {
+  position: relative;
+  width: 514px;
+  height: 342px;
+}
+.popular__ways .cards .card-prague {
+  background: no-repeat url(../images/prague.jpg);
+  background-size: 100%;
+}
+.popular__ways .cards .card-portugal {
+  background: no-repeat url(../images/portugal.jpg);
+  background-size: 100%;
+}
+.popular__ways .cards .card-dubai {
+  background: no-repeat url(../images/dubai.jpg);
+  background-size: 100%;
+}
+.popular__ways .cards .card-text {
+  position: absolute;
+  margin-top: 10px;
+  padding: 5px 8px;
+  background-color: rgba(0, 0, 0, 0.85);
+  font-family: "Roboto Slab", serif;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #fff;
+}
+.popular__ways .btn__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-direction: column;
+}
+.popular__ways .btn__logo .btn {
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 18px;
+  padding: 19px 62px;
+}
+.popular__ways .btn__logo .text {
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #333333;
+  text-align: center;
+}
+
+.stories {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-direction: column;
+  background: no-repeat url(../images/bg__stories.png);
+  background-size: 100%;
+  padding: 60px 0;
+}
+.stories::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 212, 0, 0.4);
+}
+.stories-title {
+  font-family: "Roboto Slab", serif;
+  font-style: normal;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 73px;
+  color: #fff;
+  z-index: 1;
+}
+.stories .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 112px;
+  flex-direction: row;
+}
+.stories .cards .card {
+  position: relative;
+  width: 441px;
+  height: 294px;
+}
+.stories .cards .card-thailand {
+  background: no-repeat url(../images/thailand.jpg);
+  background-size: 100%;
+}
+.stories .cards .card-our {
+  width: 514px;
+  height: 342px;
+  background: no-repeat url(../images/our.jpg);
+  background-size: 100%;
+}
+.stories .cards .card-aurora {
+  background: no-repeat url(../images/aurora.jpg);
+  background-size: 100%;
+}
+.stories .cards .card-text {
+  position: absolute;
+  margin-top: 12px;
+  padding: 5px 8px;
+  background-color: rgba(0, 0, 0, 0.85);
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #fff;
+}
+.stories .cards .card .play__button {
+  position: absolute;
+  top: 127px;
+  left: 200px;
+}
+.stories .cards .card .play__button-our {
+  top: 146px;
+  left: 236px;
 }/*# sourceMappingURL=style.css.map */

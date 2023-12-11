@@ -30,9 +30,10 @@
   line-height: $lh;
 }
 
-@mixin flex($jc,$ai,$gp){
+@mixin flex($jc,$ai,$gp, $fd){
   display: flex;
   justify-content: $jc;
   align-items: $ai;
   gap: $gp;
+  flex-direction: $fd;
 }
