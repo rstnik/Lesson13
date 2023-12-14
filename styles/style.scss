@@ -12,11 +12,10 @@
 
 .bg-1 {
   background: no-repeat url(../images/bg_1.jpg);
-  background-size: 100%;
-  // min-height: 964px;
+  background-size: 100% 100%;
   main {
     @include flex(center, center, 0px, none);
-    min-height: 964px;
+    min-height: 660px;
     .info {
       @include flex(center, center, 32px, column);
       background-color: $blackOpasity;
@@ -176,7 +175,7 @@
 
 .nearest__trip {
   background: no-repeat url(../images/barcelona.jpg);
-  background-size: 100%;
+  background-size: 100% 100%;
   min-height: 758px;
   @include flex(center, center, 0, none);
   .info {
@@ -230,8 +229,8 @@
     @include flex(center, center, 40px, row);
     .card {
       position: relative;
-      width: 514px;
-      height: 342px;
+      width: 430px;
+      height: 320px;
       &-prague {
         background: no-repeat url(../images/prague.jpg);
         background-size: 100%;
@@ -272,7 +271,7 @@
   position: relative;
   @include flex(center, center, 32px, column);
   background: no-repeat url(../images/bg__stories.png);
-  background-size: 100%;
+  background-size: 100% 100%;
   padding: 60px 0;
   &::before {
     content: "";
@@ -290,17 +289,18 @@
   }
   .cards {
     @include flex(center, center, 112px, row);
+    width: 100%;
     .card {
       position: relative;
-      width: 441px;
-      height: 294px;
+      width: 30%;
+      min-height: 277px;
       &-thailand {
         background: no-repeat url(../images/thailand.jpg);
         background-size: 100%;
       }
       &-our {
-        width: 514px;
-        height: 342px;
+        width: 33%;
+        min-height: 290px;
         background: no-repeat url(../images/our.jpg);
         background-size: 100%;
       }
@@ -318,12 +318,9 @@
       }
       .play__button{
        position: absolute;
-       top: 127px;
-       left: 200px;
-       &-our{
-        top: 146px;
-        left: 236px;
-       }
+       @include flex(center,center,0,none);
+       width: 100%;
+       height: 100%;
       }
     }
   }
